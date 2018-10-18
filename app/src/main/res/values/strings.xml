@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name">LOLA’s cupcakes</string>
+    <string name="register_and_signin">Register And SignIn</string>
+
+
+    <string name="next">Next</string>
+    <string name="institue_name">Institue Name</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="log_in">Log In</string>
+    <string name="enter_password">Enter Password</string>
+
+    <string name="institute_name">Institute Name</string>
+
+    <string name="choose_your_class">Choose Your Class</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="welcome">WELCOME</string>
+    <string name="register_and_sign_in">Register and Sign in</string>
+    <string name="username">UserName</string>
+    <string name="string">......</string>
+    <string name="login_in">Login in</string>
+    <string name="or">------------- OR --------------</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="auth">Auth</string>
+    <string name="institutes">Institutes</string>
+    <string name="timetable">Timetable</string>
+    <string name="messages">Messages</string>
+    <string name="profile">Profile</string>
+    <string name="main">Main</string>
+    <string name="classes">Classes</string>
+    <string name="new_tutes">New Tutes</string>
+    <string name="class_01">Class 01</string>
+    <string name="view">View</string>
+    <string name="tute_01">Tute 01</string>
+    <string name="scan_your_card">Scan Your Card</string>
+    <string name="scan">Scan</string>
+    <string name="institute_01">Institute 01</string>
+    <string name="payment">Payment</string>
+    <string name="name">name</string>
+
+    <string name="confirm_password">Confirm Password</string>
+    <string name="textview">TextView</string>
+
+    <string name="password_must_be_atleast_8_characters">Password(must be atleast 8 characters)</string>
+
+    <string name="string_last_name" />
+    <string name="string_string_last_name" />
+    <string name="string_string_string_last_name" />
+    <string name="string_string_string_string_last_name" />
+    <string name="string_string_string_string_string_last_name" />
+    <string name="string_string_string_string_string_string_last_name" />
+    <string name="string_string_string_string_string_string_string_last_name" />
+    <string name="string_string_string_string_string_string_string_string_last_name" />
+    <string name="string_string_string_string_string_string_string_string_string_last_name">lname</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="register">REGISTER</string>
+    <string name="first_name">First Name</string>
+
+
+    <string name="last_name">Last Name</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="student_registration">Student Registration</string>
+    <string name="nearest_town">Nearest Town</string>
+    <string name="age">age</string>
+    <string name="school">School</string>
+    <string name="o_l_index_number">O/L Index Number</string>
+    <string name="a_l_index_number">A/L Index Number</string>
+    <string name="teachers"><![CDATA[Teachers>>>]]></string>
+    <string name="students"><![CDATA[Students>>>]]></string>
+    <string name="o_l_index_number_optional">O/L Index Number(Optional)</string>
+    <string name="a_l_index_number_optional">A/L Index Number(Optional)</string>
+    <string name="nic_number">NIC Number</string>
+    <string name="select_your_institute">Select Your Institute</string>
+    <string name="registration_number">Registration Number</string>
+
+    <string name="go"><![CDATA[Go>>>]]></string>
+    <string name="choose_your_institute_here">Choose Your Institute Here</string>
+    <string name="enter_your_institute_reg_number_here">Enter your Institute reg number here</string>
+    <string name="welcome_institute_name"><![CDATA[Welcome <Institute name>]]></string>
+    <string name="logout">LogOut</string>
+    <string name="next2"><![CDATA[NEXT>>>]]></string>
+    <string name="teacher_registration">Teacher Registration</string>
+    <string name="current_working_school">Current Working School</string>
+    <string name="teaching_subjects">Teaching Subjects</string>
+    <string name="educational_qulification">Educational qulification</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="choose_your_course_here">Choose your course here</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="userr_name">User name</string>
+    <string name="user_gmail_com">user@gmail.com</string>
+
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_setting_account">SettingAccount</string>
+    <string name="setting_account">Setting Account</string>
+    <string name="title_activity_dash">dash</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="regi">Register</string>
+
+    <string name="password">password</string>
+    <string name="regis">Register</string>
+    <string name="signin">SignIn</string>
+    <string name="todo" />
+    <string name="admin"><![CDATA[Admin>>>]]></string>
+    <string name="member"><![CDATA[Member>>>]]></string>
+
+
+</resources>
+
