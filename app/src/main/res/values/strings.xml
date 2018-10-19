@@ -186,6 +186,13 @@
     <string name="todo" />
     <string name="admin"><![CDATA[Admin>>>]]></string>
     <string name="member"><![CDATA[Member>>>]]></string>
+    <string name="ad">Add</string>
+    <string name="modify">Modify</string>
+    <string name="add_cupcakes">Add cupcakes</string>
+    <string name="check">Check</string>
+    <string name="modify_cupcakes">Modify Cupcakes</string>
+    <string name="profile">Profile</string>
+    <string name="check_orders">Check Orders</string>
 
 
 </resources>
