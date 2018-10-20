@@ -1,11 +1,8 @@
 package com.example.user.lolascupcakes.Models;
 
-import com.example.user.lolascupcakes.Controlers.MyConnection;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Admin {
     Connection con = null;

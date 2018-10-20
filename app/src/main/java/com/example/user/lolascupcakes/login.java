@@ -46,35 +46,28 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 String uname = username.getText().toString();
                 String paswd = passwd.getText().toString();
-                cursor = db.rawQuery("SELECT *FROM " + DatabaseHelper.TABLE_USER + " WHERE " + DatabaseHelper.KEY_EMAIL + "=? AND " + DatabaseHelper.KEY_PASWD + "=?", new String[]{uname, paswd});
+                cursor = db.rawQuery("SELECT "+ DatabaseHelper.KEY_LEVELID + " FROM " + DatabaseHelper.TABLE_USER + " WHERE " + DatabaseHelper.KEY_EMAIL + "=? AND " + DatabaseHelper.KEY_PASWD + "=?", new String[]{uname, paswd});
                 if (cursor != null) {
+
                     if (cursor.getCount() > 0) {
-                        Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
-                        adminHomePg();
+                        cursor.moveToFirst(); //to get the user levelId
+                        int levelId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.KEY_LEVELID));
+
+                       if(levelId == 0){
+                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                            adminHomePg();
+                        }
+                        if(levelId == 1){
+                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                            memberHomePg();
+                        }
 
                     } else {
                         Toast.makeText(getApplicationContext(), "Login error", Toast.LENGTH_SHORT).show();
                     }
                 }
 
-              /*  PreparedStatement ps = user.UserLogin(uname, paswd);
 
-                    ResultSet rs = ps.executeQuery();
-                    if (rs.next()) {
-                        int ulevel = rs.getInt(1);
-                        if (ulevel == 0) {
-                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();
-                            adminHomePg();
-                        } else if (ulevel == 1) {
-                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();
-                            memberHomePg();
-                        }
-                    }
-                } catch (SQLException e) {
-                    Toast.makeText(getApplicationContext(), "Connection Error", Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-
-                } */
             }
         });
         userregpg.setOnClickListener(new View.OnClickListener() {

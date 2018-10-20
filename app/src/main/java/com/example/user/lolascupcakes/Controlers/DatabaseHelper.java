@@ -168,6 +168,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+    public void closeDB() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        if (db != null && db.isOpen())
+            db.close();
+    }
 
 
 
