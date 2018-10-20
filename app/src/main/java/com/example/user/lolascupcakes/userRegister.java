@@ -52,6 +52,8 @@ public class userRegister extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         regAdmin = (Button) findViewById(R.id.regAdmin);
         regMember = (Button) findViewById(R.id.regMember);
+
+        dbase = new DatabaseHelper(this);
         user = new User();
 
         regAdmin.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +80,13 @@ public class userRegister extends AppCompatActivity {
                     String passwrd = passwd.getText().toString();
                     returnPassword = passwrd;
                     //prepared statement of user as a Admin
-                    user.setEmail(emai);
+                   user.setEmail(emai);
                     user.setFname(finame);
                     user.setLname(laname);
                     user.setPasswrd(passwrd);
                     user.setLevelid(0); //Admin Level Id is 0
                     dbase.createUser(user);
+                   // dbase.createUser(emai,finame,laname,passwrd,0);
                     Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                     adminHomePg();
 

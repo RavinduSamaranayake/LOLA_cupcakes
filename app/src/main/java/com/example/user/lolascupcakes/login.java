@@ -1,6 +1,9 @@
 package com.example.user.lolascupcakes;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user.lolascupcakes.Controlers.DatabaseHelper;
 import com.example.user.lolascupcakes.Models.User;
 
 import java.sql.PreparedStatement;
@@ -19,7 +23,11 @@ public class login extends AppCompatActivity {
     Button userregpg;
     EditText username;
     EditText passwd;
-    User user;
+    SQLiteDatabase db;
+    DatabaseHelper openHelper;
+    Cursor cursor;
+
+   // User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +37,28 @@ public class login extends AppCompatActivity {
         userregpg = (Button) findViewById(R.id.regBtn);
         username = (EditText) findViewById(R.id.txtUname);
         passwd = (EditText) findViewById(R.id.txtPasswd);
-        user = new User();
+        openHelper=new  DatabaseHelper(this);
+        db = openHelper.getReadableDatabase();
+        //user = new User();
 
         tomain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String uname = username.getText().toString();
                 String paswd = passwd.getText().toString();
-                PreparedStatement ps = user.UserLogin(uname, paswd);
-                try {
+                cursor = db.rawQuery("SELECT *FROM " + DatabaseHelper.TABLE_USER + " WHERE " + DatabaseHelper.KEY_EMAIL + "=? AND " + DatabaseHelper.KEY_PASWD + "=?", new String[]{uname, paswd});
+                if (cursor != null) {
+                    if (cursor.getCount() > 0) {
+                        Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                        adminHomePg();
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Login error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+              /*  PreparedStatement ps = user.UserLogin(uname, paswd);
+
                     ResultSet rs = ps.executeQuery();
                     if (rs.next()) {
                         int ulevel = rs.getInt(1);
@@ -53,7 +74,7 @@ public class login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Connection Error", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
 
-                }
+                } */
             }
         });
         userregpg.setOnClickListener(new View.OnClickListener() {
