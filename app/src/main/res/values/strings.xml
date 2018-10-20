@@ -26,7 +26,7 @@
     <string name="institutes">Institutes</string>
     <string name="timetable">Timetable</string>
     <string name="messages">Messages</string>
-    <string name="profile">Profile</string>
+
     <string name="main">Main</string>
     <string name="classes">Classes</string>
     <string name="new_tutes">New Tutes</string>
@@ -46,13 +46,7 @@
 
     <string name="string_last_name" />
     <string name="string_string_last_name" />
-    <string name="string_string_string_last_name" />
-    <string name="string_string_string_string_last_name" />
-    <string name="string_string_string_string_string_last_name" />
-    <string name="string_string_string_string_string_string_last_name" />
-    <string name="string_string_string_string_string_string_string_last_name" />
-    <string name="string_string_string_string_string_string_string_string_last_name" />
-    <string name="string_string_string_string_string_string_string_string_string_last_name">lname</string>
+
 
     <string name="cancel">Cancel</string>
     <string name="register">REGISTER</string>
@@ -193,6 +187,9 @@
     <string name="modify_cupcakes">Modify Cupcakes</string>
     <string name="profile">Profile</string>
     <string name="check_orders">Check Orders</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="view_orders">View Orders</string>
+    <string name="view_all_orders">View All orders</string>
 
 
 </resources>
