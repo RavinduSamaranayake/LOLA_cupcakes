@@ -62,7 +62,7 @@ public class placingOrder extends AppCompatActivity implements DatePickerDialog.
                     order.setDate(date);
                     dbase.createOrder(order);
                     Toast.makeText(getApplicationContext(), "Your Placing Order is Success", Toast.LENGTH_LONG).show();
-                } 
+                }
             }
         });
 
