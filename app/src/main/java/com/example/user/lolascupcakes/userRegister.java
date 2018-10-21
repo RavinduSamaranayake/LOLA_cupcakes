@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.user.lolascupcakes.Controlers.DatabaseHelper;
-import com.example.user.lolascupcakes.Models.Admin;
-import com.example.user.lolascupcakes.Models.Member;
+
 import com.example.user.lolascupcakes.Models.User;
 
 import java.sql.Connection;
@@ -32,9 +32,8 @@ public class userRegister extends AppCompatActivity {
     String returnEmail=null;
     String returnPassword=null;
     User user;
-    Connection con;
-    PreparedStatement ps = null;
-    //SQLiteOpenHelper openHelper;
+
+
     DatabaseHelper dbase;
 
     @Override
@@ -59,11 +58,16 @@ public class userRegister extends AppCompatActivity {
         regAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String value = email.getText().toString().trim();
                 if (fname.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "Name is Empty", Toast.LENGTH_LONG).show();
                 } else if (email.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "email is Empty", Toast.LENGTH_LONG).show();
-                } else if (passwd.getText().length() == 0) {
+                }
+                 else if (!Patterns.EMAIL_ADDRESS.matcher(value).matches()){
+                    Toast.makeText(getApplicationContext(), "Not Valid Email Address", Toast.LENGTH_LONG).show();
+                }
+                else if (passwd.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "password is Empty", Toast.LENGTH_LONG).show();
                 } else if (passwd.getText().length() < 8) {
                     Toast.makeText(getApplicationContext(), "password is short", Toast.LENGTH_LONG).show();
@@ -104,12 +108,15 @@ public class userRegister extends AppCompatActivity {
         regMember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String value = email.getText().toString().trim();
                 if (fname.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "Name is Empty", Toast.LENGTH_LONG).show();
                 } else if (email.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "email is Empty", Toast.LENGTH_LONG).show();
-                } else if (passwd.getText().length() == 0) {
+                }else if (!Patterns.EMAIL_ADDRESS.matcher(value).matches()){
+                    Toast.makeText(getApplicationContext(), "Not Valid Email Address", Toast.LENGTH_LONG).show();
+                }
+                else if (passwd.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "password is Empty", Toast.LENGTH_LONG).show();
                 } else if (passwd.getText().length() < 8) {
                     Toast.makeText(getApplicationContext(), "password is short", Toast.LENGTH_LONG).show();

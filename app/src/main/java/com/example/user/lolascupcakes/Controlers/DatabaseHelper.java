@@ -62,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // user table create statement
     public static final String CREATE_TABLE_USER = "CREATE TABLE "
             + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_EMAIL
-            + " TEXT UNIQUE," + KEY_FNAME + " TEXT," + KEY_LNAME + " TEXT,"+ KEY_PASWD + " TEXT,"+ KEY_LEVELID
+            + " TEXT unique," + KEY_FNAME + " TEXT," + KEY_LNAME + " TEXT,"+ KEY_PASWD + " TEXT,"+ KEY_LEVELID
             + " INTEGER" + ")";
 
     // cupcake table create statement

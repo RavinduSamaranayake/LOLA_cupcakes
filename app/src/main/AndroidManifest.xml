@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.lolascupcakes">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -20,7 +21,8 @@
         <activity android:name=".login" />
         <activity android:name=".userRegister" />
         <activity android:name=".AdminHome" />
-        <activity android:name=".memberHome"></activity>
+        <activity android:name=".memberHome" />
+        <activity android:name=".addCupCakes"></activity>
     </application>
 
 </manifest>
