@@ -56,6 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // ORDER Table - column names
     public static final String KEY_TYPE = "type";
+    public static final String KEY_QTY = "qty";
     public static final String KEY_DATE = "date";
 
     // Table Create Statements
@@ -73,7 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // orders table create statement
     public static final String CREATE_TABLE_ORDER = "CREATE TABLE "
             + TABLE_ORDER + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_TYPE
-            + " TEXT," + KEY_DATE + " DATE" + ")";
+            + " TEXT,"+ KEY_QTY + " TEXT," + KEY_DATE + " TEXT" + ")";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -159,6 +160,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
         values.put(KEY_TYPE, order.getType());
+        values.put(KEY_QTY, order.getQty());
         values.put(KEY_DATE, order.getDate());
 
         // insert row

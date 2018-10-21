@@ -22,7 +22,8 @@
         <activity android:name=".userRegister" />
         <activity android:name=".AdminHome" />
         <activity android:name=".memberHome" />
-        <activity android:name=".addCupCakes"></activity>
+        <activity android:name=".addCupCakes" />
+        <activity android:name=".placingOrder"></activity>
     </application>
 
 </manifest>

@@ -199,6 +199,9 @@
     <string name="_20">20%</string>
     <string name="wedding">Wedding</string>
     <string name="lkr_for_500g">LKR for 500g</string>
+    <string name="ex_1_5_kg">Ex: 1.5 Kg</string>
+    <string name="placing_order">Placing Order</string>
+    <string name="date">Date</string>
 
 
 </resources>

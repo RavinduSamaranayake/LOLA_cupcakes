@@ -4,11 +4,23 @@ public class Order {
     int id;
     String type;
     String date;
+    String qty;
     public Order(){
     }
-    public Order(String type,String date){
+
+    public String getQty() {
+        return qty;
+    }
+
+    public void setQty(String qty) {
+        this.qty = qty;
+    }
+
+    public Order(String type, String date, String qty){
         this.type = type;
         this.date = date;
+        this.qty = qty;
+
     }
 
     public int getId() {
