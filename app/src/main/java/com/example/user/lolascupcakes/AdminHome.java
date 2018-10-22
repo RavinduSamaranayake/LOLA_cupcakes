@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class AdminHome extends AppCompatActivity {
     CardView addCake;
+    CardView modCake;
    // Button addpg;
    // Button modifypg;
   //  Button orderpg;
@@ -20,6 +21,7 @@ public class AdminHome extends AppCompatActivity {
        // addpg = (Button)findViewById(R.id.Addcake);
        // modifypg=(Button)findViewById(R.id.modifycake
         addCake = (CardView) findViewById(R.id.Addcake);
+        modCake = (CardView) findViewById(R.id.modifycake);
 
 
         addCake.setOnClickListener(new View.OnClickListener() {
@@ -28,8 +30,19 @@ public class AdminHome extends AppCompatActivity {
                 openAddcakepg();
             }
         });
+        modCake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openModicakepg();
+            }
+        });
 
 
+    }
+
+    private void openModicakepg() {
+        Intent intent = new Intent(this,cakeList.class);
+        startActivity(intent);
     }
 
     private void openAddcakepg() {

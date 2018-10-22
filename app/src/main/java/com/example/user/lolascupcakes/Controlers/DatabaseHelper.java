@@ -170,11 +170,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+    public ArrayList<Cupcakes> getAllCupcakes() {    //for get the all records for Array list
+        ArrayList<Cupcakes> ccakes = new ArrayList<Cupcakes>();
+        String selectQuery = "SELECT  * FROM " + TABLE_CUPCAKE;
+
+        Log.e(LOG, selectQuery);
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                Cupcakes ck = new Cupcakes();
+                ck.setCakeId(c.getInt((c.getColumnIndex(KEY_ID))));
+                ck.setOcation(c.getString((c.getColumnIndex(KEY_OCATION))));
+                ck.setOffer(c.getString((c.getColumnIndex(KEY_OFFER))));
+                ck.setPrice(c.getString((c.getColumnIndex(KEY_PRICE))));
+                ck.setName(c.getString((c.getColumnIndex(KEY_NAME))));
+
+
+
+                // adding to ccake list
+                ccakes.add(ck);
+            } while (c.moveToNext());
+        }
+
+        return ccakes;
+    }
     public void closeDB() {
         SQLiteDatabase db = this.getReadableDatabase();
         if (db != null && db.isOpen())
             db.close();
     }
+
 
 
 
