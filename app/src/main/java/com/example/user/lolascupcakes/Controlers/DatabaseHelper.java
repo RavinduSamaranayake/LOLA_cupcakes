@@ -29,12 +29,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
 
     // Database Name
-    public static final String DATABASE_NAME = "LOLAcupcake";
+    public static final String DATABASE_NAME = "LOLA";
 
     // Table Names
     public static final String TABLE_USER = "user"; //todos
     public static final String TABLE_CUPCAKE ="cupcakes"; //"tags";
-    public static final String TABLE_ORDER ="orders"; // "todo_tags";
+    public static final String TABLE_ORDER ="ordercake"; // "todo_tags";
 
     // Common column names
     public static final String KEY_ID = "id";
@@ -87,6 +87,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_USER);
         db.execSQL(CREATE_TABLE_CUPCAKE);
         db.execSQL(CREATE_TABLE_ORDER);
+        //db.execSQL("DROP TABLE " + TABLE_ORDER);
     }
 
     @Override
@@ -198,6 +199,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return ccakes;
     }
+
+    public ArrayList<Order> getAllOrders() {    //for get the all records for Array list
+        ArrayList<Order> orders = new ArrayList<Order>();
+        String selectQuery = "SELECT  * FROM " + TABLE_ORDER;
+
+        Log.e(LOG, selectQuery);
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                Order od = new Order();
+                od.setId(c.getInt((c.getColumnIndex(KEY_ID))));
+                od.setType(c.getString((c.getColumnIndex(KEY_TYPE))));
+                od.setQty(c.getString((c.getColumnIndex(KEY_QTY))));
+                od.setDate(c.getString((c.getColumnIndex(KEY_DATE))));
+
+
+
+
+                // adding to ccake list
+                orders.add(od);
+            } while (c.moveToNext());
+        }
+
+        return orders;
+    }
+
     public void closeDB() {
         SQLiteDatabase db = this.getReadableDatabase();
         if (db != null && db.isOpen())
