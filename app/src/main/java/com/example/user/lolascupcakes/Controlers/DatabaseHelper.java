@@ -14,6 +14,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
 import com.example.user.lolascupcakes.Models.Cupcakes;
@@ -199,6 +200,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return ccakes;
     }
+    public ArrayList<Integer> getAllCakeId() {    //for get the all records for Integer Array list
+        ArrayList<Integer> cakeid = new ArrayList<Integer>();
+        String selectQuery = "SELECT "+KEY_ID+" FROM " + TABLE_CUPCAKE;
+
+        Log.e(LOG, selectQuery);
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                cakeid.add(c.getColumnIndex(KEY_ID));
+            } while (c.moveToNext());
+        }
+
+        return cakeid;
+    }
 
     public ArrayList<Order> getAllOrders() {    //for get the all records for Array list
         ArrayList<Order> orders = new ArrayList<Order>();
@@ -227,6 +246,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         return orders;
+    }
+    public void updateCake(Cupcakes cupcakes,int pos) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_NAME, cupcakes.getName());
+        values.put(KEY_OCATION, cupcakes.getOcation());
+        values.put(KEY_PRICE, cupcakes.getPrice());
+        values.put(KEY_OFFER, cupcakes.getOffer());
+        values.put(KEY_DES, cupcakes.getDescription());
+
+
+        // updating row
+        db.update(TABLE_CUPCAKE, values, KEY_ID + " = ?",
+                new String[] { String.valueOf(pos) });
+    }
+    public void updatedata(Cupcakes cupcakes,int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+       // String sql = "UPDATE cupcakes  SET  name = ? , ocation  = ? , price = ? , offer = ?, description= ? WHERE id= ?";
+        String sqld = "UPDATE "+ TABLE_CUPCAKE + " SET " + KEY_NAME + " = ? ,"+ KEY_OCATION + " = ? ,"+ KEY_PRICE +"= ? ,"+ KEY_OFFER + "= ?," +KEY_DES+"= ?  WHERE "+KEY_ID+" = ?";
+        SQLiteStatement statement = db.compileStatement(sqld);
+        statement.bindString(1,cupcakes.getName());
+        statement.bindString(3,cupcakes.getPrice());
+        statement.bindString(2,cupcakes.getOcation());
+        statement.bindString(4,cupcakes.getOffer());
+        statement.bindString(5,cupcakes.getDescription());
+        statement.bindDouble(5,(double)id);
+        statement.execute();
+
+
+
+
     }
 
     public void closeDB() {

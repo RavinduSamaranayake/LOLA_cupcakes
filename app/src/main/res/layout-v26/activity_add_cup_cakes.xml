@@ -82,7 +82,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ocation"
+        android:text="@string/occasion"
         android:textColor="@color/Crimson"
         android:textSize="20sp"
        />
