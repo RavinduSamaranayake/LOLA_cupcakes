@@ -21,10 +21,12 @@ public class placingOrder extends AppCompatActivity implements DatePickerDialog.
     EditText type;
     EditText qty;
     TextView dateview;
+    TextView setdate;
     Button add_order;
     Button set_date;
     DatabaseHelper dbase;
     Order order;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +35,11 @@ public class placingOrder extends AppCompatActivity implements DatePickerDialog.
         qty = (EditText) findViewById(R.id.qty);
         dateview =(TextView) findViewById(R.id.tvdate);
         add_order =(Button) findViewById(R.id.btnaddOrder);
-        set_date =(Button) findViewById(R.id.btnsetDate);
+
+        setdate = (TextView) findViewById(R.id.dateaction);
         dbase = new DatabaseHelper(this);
         order = new Order();
-        set_date.setOnClickListener(new View.OnClickListener() {
+        setdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatePickerFragment datePicker = new DatePickerFragment();

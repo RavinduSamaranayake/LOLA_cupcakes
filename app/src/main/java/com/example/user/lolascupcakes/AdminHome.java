@@ -23,7 +23,7 @@ public class AdminHome extends AppCompatActivity {
        // modifypg=(Button)findViewById(R.id.modifycake
         addCake = (CardView) findViewById(R.id.Addcake);
         modCake = (CardView) findViewById(R.id.modifycake);
-        checkorder = (CardView) findViewById(R.id.view_order);
+        checkorder = (CardView) findViewById(R.id.vieworder);
 
 
         addCake.setOnClickListener(new View.OnClickListener() {

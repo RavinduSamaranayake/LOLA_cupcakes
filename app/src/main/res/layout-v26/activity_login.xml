@@ -2,9 +2,10 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/regcvr"
+    android:background="@drawable/newlogin"
     android:orientation="vertical"
 
     android:paddingLeft="18dp"
@@ -17,9 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="16dp"
-        android:text="@string/register_and_signin"
         android:textAllCaps="true"
-        android:textColor="@color/Crimson"
+        android:textColor="@color/DarkGreen"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -28,15 +28,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:background="#6ef4f4f4"
-        android:drawablePadding="78dp"
 
+        android:drawablePadding="78dp"
         android:ems="1"
         android:hint="@string/user_name"
         android:inputType="textEmailAddress"
         android:padding="16dp"
-        android:textColorHint="#fff"
-        android:autofillHints="" />
+        android:textColor="@color/Black"
+        android:textColorHint="#fff" />
 
     <EditText
         android:id="@+id/txtPasswd"
@@ -56,14 +57,14 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="106dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:padding="2dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@color/MediumPurple"
 
-        />
+        android:textSize="18sp"
+        tools:text="SignIn or SignUp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,9 +79,9 @@
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_weight="4.5"
-            android:background="@color/FireBrick"
+            android:background="@drawable/edittextstyle"
             android:padding="16dp"
-            android:text="@string/regi"
+            android:text="SignUp"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textStyle="bold" />
@@ -97,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4.5"
 
-            android:background="@color/Chartreuse"
+            android:background="@drawable/gradienteditext"
             android:padding="16dp"
             android:text="@string/signin"
             android:textAllCaps="false"

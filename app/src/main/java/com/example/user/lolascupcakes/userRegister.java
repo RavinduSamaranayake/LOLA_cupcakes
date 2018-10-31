@@ -57,14 +57,14 @@ public class userRegister extends AppCompatActivity {
 
         regAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //All Verification
                 String value = email.getText().toString().trim();
                 if (fname.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "Name is Empty", Toast.LENGTH_LONG).show();
                 } else if (email.getText().length() == 0) {
                     Toast.makeText(getApplicationContext(), "email is Empty", Toast.LENGTH_LONG).show();
                 }
-                 else if (!Patterns.EMAIL_ADDRESS.matcher(value).matches()){
+                 else if (!Patterns.EMAIL_ADDRESS.matcher(value).matches()){ //Email Verification
                     Toast.makeText(getApplicationContext(), "Not Valid Email Address", Toast.LENGTH_LONG).show();
                 }
                 else if (passwd.getText().length() == 0) {

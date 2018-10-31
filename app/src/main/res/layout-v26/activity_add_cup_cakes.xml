@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_foraddpg"
+    android:background="@drawable/new_addcup"
     android:orientation="vertical"
     android:paddingLeft="18dp"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="16dp"
-        android:text="@string/add_cupcake"
         android:textAllCaps="true"
         android:textColor="@color/Crimson"
         android:textSize="30sp"
@@ -29,9 +28,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/cupcake_name"
-        android:textColor="@color/Crimson"
-        android:textSize="20sp"
-          />
+        android:textColor="@color/DarkBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/cake_name"
@@ -46,9 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/price"
-        android:textColor="@color/Crimson"
-        android:textSize="20sp"
-         />
+        android:textColor="@color/DarkBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Price"
@@ -65,9 +64,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/description"
-        android:textColor="@color/Crimson"
-        android:textSize="20sp"
-         />
+        android:textColor="@color/DarkBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/desription"
@@ -83,9 +82,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/occasion"
-        android:textColor="@color/Crimson"
-        android:textSize="20sp"
-       />
+        android:textColor="@color/DarkBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/ocation"
@@ -93,7 +92,7 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/wedding"
+        android:hint="Bithday Party"
         android:inputType="textPersonName"
         android:textSize="20sp" />
 
@@ -101,9 +100,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/set_offer"
-        android:textColor="@color/Crimson"
-        android:textSize="20sp"
-        />
+        android:textColor="@color/DarkBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/offer"
@@ -135,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="4.5"
-            android:background="@color/DarkRed"
+            android:background="@drawable/gradienteditext"
             android:fontFamily="monospace"
             android:padding="16dp"
             android:text="@string/add_cupcake"
